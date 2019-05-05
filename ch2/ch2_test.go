@@ -58,3 +58,13 @@ func TestIMultiplyLongs(t *testing.T) {
 		t.FailNow()
 	}
 }
+
+func TestDeleteDuplicate(t *testing.T) {
+	out := []int{1, 2, 3, 4, 5, 6, 7}
+	in := []int{1, 1, 2, 2, 3, 4, 5, 6, 7, 7}
+	tmp := DeleteDuplicate(in)
+
+	if !compareintarray(out, tmp) {
+		t.FailNow()
+	}
+}
