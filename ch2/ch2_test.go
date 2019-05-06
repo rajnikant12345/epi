@@ -68,3 +68,12 @@ func TestDeleteDuplicate(t *testing.T) {
 		t.FailNow()
 	}
 }
+
+func TestMaxProfitOnce(t *testing.T) {
+	in := []int{310, 315, 275, 295, 260, 270, 290, 230, 255, 250}
+	tmp := MaxProfitOnce(in)
+
+	if tmp != 30 {
+		t.FailNow()
+	}
+}
