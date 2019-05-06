@@ -77,3 +77,20 @@ func TestMaxProfitOnce(t *testing.T) {
 		t.FailNow()
 	}
 }
+
+func TestMaxProfitTwice(t *testing.T) {
+	in := []int{12, 11, 13, 9, 12, 8, 14, 13, 15}
+	tmp := MaxProfitTwice(in)
+
+	if tmp != 10 {
+		t.FailNow()
+	}
+
+	in = []int{12, 11, 10, 9, 8, 7, 6, 5, 4}
+	tmp = MaxProfitTwice(in)
+
+	if tmp != 0 {
+		t.FailNow()
+	}
+
+}
